@@ -38,6 +38,7 @@ The primary goals were to:
 
 ### Access the Wazuh Dashboard
 Access the Wazuh dashboard via the browser using:https://<WAZUH_PUBLIC_IP>
+![unnamed](https://github.com/user-attachments/assets/f3c401c5-326a-4814-9185-0d3958f5e6fc)
 
 
 ---
