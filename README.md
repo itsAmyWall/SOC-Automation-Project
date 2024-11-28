@@ -27,8 +27,6 @@ The primary goals were to:
 ---
 
 ## Installation Steps
-### Firewall
-Configure the firewall to allow traffic only from specific IPs.
 
 ### Wazuh Installation
 1. Set up the Ubuntu server for Wazuh.
@@ -76,6 +74,9 @@ Access the Wazuh dashboard via the browser using:https://<WAZUH_PUBLIC_IP>
 
 4. **Configure Hive:**  
    Update the database and index host settings to the public IP of the Hive server.
+
+### Firewall
+Configure the firewall to allow traffic only from specific IPs.
 
 ---
 
