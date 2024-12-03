@@ -185,6 +185,7 @@ Example rule: `original_file_name` in Wazuh.
 
 #### Testing the Custom Alert:
 - Ran Mimikatz again to trigger the custom rule, and verified the alert was generated in Wazuh.
+![unnamed](https://github.com/user-attachments/assets/4fe47c58-39fb-42ad-a75b-0cd1f9779f6e)
 
 ## Integration with Shuffle for Workflow Automation
 
@@ -192,10 +193,15 @@ To automate the response to critical alerts, we integrated Shuffle with the SOC 
 
 #### Configure Webhook in ossec.conf:
 - Added the Shuffle webhook to the `ossec.conf` file to trigger alerts for certain conditions (e.g., Mimikatz execution).
+![unnamed](https://github.com/user-attachments/assets/c1ee78e4-6239-492a-a01b-2d675fbcd603)
 
 #### Alert Workflow:
 - When a Mimikatz alert is triggered in Wazuh, the alert is sent to Shuffle via the webhook.
+  ![unnamed](https://github.com/user-attachments/assets/980d3ede-c8e1-4aa0-be18-08513e912e77)
+
 - Shuffle processes the alert, extracts the SHA256 hash of the file, and checks the file's reputation score using VirusTotal.
+  ![unnamed](https://github.com/user-attachments/assets/b28c0757-91f1-42ea-b1b2-ece748c7493e)
+
 - If the file is suspicious, Shuffle sends the alert details to TheHive to create an incident.
 - Additionally, Shuffle sends an email to the SOC analyst to notify them of the suspicious activity.
 
